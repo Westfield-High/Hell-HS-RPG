@@ -1,0 +1,45 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+body{
+  background-color:grey;
+}
+#board {
+  border: 10px solid blue;
+  background-color:white;
+  padding: 10px;
+  display: flex;
+}
+#classPic img {
+  width:250px;
+}
+#classPic {
+  height: 340px;
+  border: 3px solid black;
+  margin-right: 10px;
+}
+
+.buttons-container {
+  display: flex;
+  flex-direction: column;
+}
+
+button {
+  width: 120px;
+  margin-bottom: 10px;
+  border: 3px solid blue;
+  background-color: #454545;
+  color: white;
+  
+   /* Initially hide the buttons */
+}
+button:hover{
+  border: 3px solid red; 
+}
+#classButtons{
+  display:none;
+}
+#classInfo{
+  
+}
