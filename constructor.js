@@ -53,7 +53,8 @@ function setPhoto(charClass) {
 
 function setup(){
   classButtons.style.display = "block";
-  h2.style.display = "none" 
+  h2.style.display = "none";
+  play.style.display = "none";
 }
 
 function getName(){
