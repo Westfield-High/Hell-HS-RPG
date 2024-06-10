@@ -22,6 +22,7 @@ function showCharacter(charName){
   playerOne.name = myName; 
   let classPic = document.getElementById("classPic");
   classPic.innerHTML = playerOne.describe() + playerOne.illustrate();
+  classButtons.style.display = "none";
  }
 
 function randomRoom(){
