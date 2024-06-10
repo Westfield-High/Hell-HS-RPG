@@ -21,7 +21,10 @@ function showCharacter(charName){
   let myName = prompt("what do you want to name your character ?");
   playerOne.name = myName; 
   let classPic = document.getElementById("classPic");
-  classPic.innerHTML = playerOne.describe() + playerOne.illustrate();
+  let message.createElement("p");
+  message.innerHTML = playerOne.describe() + playerOne.illustrate();
+  classPic.innerHTML = "";
+  classPic.appendChild(message);
   let classButtons = document.getElementById("classButtons");
   classButtons.style.display = "none";
  }
