@@ -54,6 +54,7 @@ function setPhoto(charClass) {
 function setup(){
   classButtons.style.display = "block";
   h2.style.display = "none";
+  let play = document.getElementById("play");
   play.style.display = "none";
 }
 
