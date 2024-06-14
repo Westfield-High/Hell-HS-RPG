@@ -21,12 +21,7 @@
                <button id="rogue" onclick="showCharacter(kirito)">Rogue</button>
                <button id="mage" onclick="showCharacter(luna)">Mage</button>
             </div>
-            <div id="monsterButtons" style="display:none;">
-               <h3>Choose a Monster to Fight:</h3>
-               <button onclick="startBattle('Goblin')">Goblin</button>
-               <button onclick="startBattle('Dragon')">Dragon</button>
-               <button onclick="startBattle('Skeleton')">Skeleton</button>
-            </div>
+             
             <div id="monsterInfo"></div>
             <div id="playerActions" style="display:none;">
                <button onclick="takeTurn('attack')">Attack</button>
@@ -36,9 +31,14 @@
             </div>
             <button id="marketplaceButton" onclick="randomRoom()">Go to Marketplace</button>
          </div>
-		 <div id="classPic" class="box"></div>
+		 <div id="classPic" class="box">
+    <button id="button1">choice 1</button>
+    <button id="button2">choice 2</button>
+    <button id="button3">choice 3</button>
+ </div>
       </div>
       <a href = "import.html">import</a>
+	  <button id = "map" onclick = "enterSchool()">School map</button>
       <script src="constructor.js"></script>
       <script src="rooms.js"></script>
       <script src="script.js"></script>
