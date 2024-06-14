@@ -10,6 +10,7 @@ body{
   background-color:white;
   padding: 10px;
   display: flex;
+  width:700px;
 }
 #classPic img {
   width:250px;
@@ -51,4 +52,8 @@ button:hover{
 }
 #classInfo{
   color:white;
+}
+#map{
+  color:white;
+  
 }
