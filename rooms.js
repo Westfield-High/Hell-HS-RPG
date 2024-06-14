@@ -1,5 +1,13 @@
 let objectArray=[];
-
+const locations = [
+    {
+        name: "main entrance",
+        "button text": ["pick the lock", "try to break down the door", "steal an ID of someone", "follow someone into the building"],
+        "button functions": [pickLock],
+        text: "You are at the front door of a school. You see a sign that says \"Hell Highschool.\""
+    }]
+	
+	
 function startProcess(){
   const csvData = document.getElementById('csvInput').value;
   objectArray = processData(csvData);
@@ -17,11 +25,12 @@ function processData(csvData) {
 }
 
 function showCharacter(charName){
+	console.log("showCharacter");
   let playerOne = charName;
   let myName = prompt("what do you want to name your character ?");
   playerOne.name = myName; 
   let classPic = document.getElementById("classPic");
-  let message.createElement("p");
+  let message = document.createElement("p");
   message.innerHTML = playerOne.describe() + playerOne.illustrate();
   classPic.innerHTML = "";
   classPic.appendChild(message);
@@ -76,12 +85,10 @@ function treasureRoom(){
     alert("you have received " + items + " items");
 
     let itemList = ['sword','red potion','blue potion','staff','bow','axe','dagger','ninja star','long sword','shuriken', 'twisted dagger','battle axe', 'spear'];
-    //start my for loop//
    for(let item = 1;item < items; item++){
     setmyInventory.push(itemList[Math.floor(Math.random()*itemList.length)]);
    }
     console.log(setmyInventory.toString()); 
-    // end for loop//
   }
 
 function eventRoom(){
@@ -104,7 +111,7 @@ function eventRoom(){
 
       default:
       }
-  }
+}
 
 function portal(){
       alert("you see a strange portal its like nothing you've ever seen before ")
@@ -192,4 +199,42 @@ function portalRoom(){
           break;
         default: 
     }
+}
+
+function update(location) {
+    //monsterStats.style.display = "none";
+	button1.innerText = location["button text"][0];
+	button2.innerText = location["button text"][1];
+	button3.innerText = location["button text"][2];
+	button1.onclick = location["button functions"][0];
+	button2.onclick = location["button functions"][1];
+	button3.onclick = location["button functions"][2];
+	classPic = document.getElementById("classPic");
+  let message = document.createElement("p");
+  message.innerHTML = location.text; 
+  classPic.appendChild(message);   
+}
+function enterSchool() {
+    update(locations[0]);
+}
+
+function pickLock(){
+	alert("you have chose to pick the lock of the school");
+	let lock = prompt("do you want to pick the lock by [h]and or [m]agic");
+	if(lock == "h"){
+		let chance = Math.floor(Math.random()*2)+1;
+		switch(chance){
+			case 1:
+				alert("you have been spotted and reported");
+				pickLock();
+				break;
+			case 2:
+				alert("you picked the lock someone saw you but they shrugged it off")
+				break
+			default:
+		}
+	}
+	else if(lock == "m" ){
+		alert("you have entered the building without a problem")
+	}
 }
